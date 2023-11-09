@@ -1,6 +1,6 @@
 from django.urls import path
 
-from .views import UserRegistrationView, LogoutView, UserLoginView
+from .views import UserRegistrationView, LogoutView, UserLoginView, filltheformview, welcomepage
 
 
 app_name = 'accounts'
@@ -18,4 +18,10 @@ urlpatterns = [
         "register/", UserRegistrationView.as_view(),
         name="user_registration"
     ),
+    path(
+        "filltheform/", filltheformview.as_view(),
+        name="filltheform"
+    ),
+
+
 ]
